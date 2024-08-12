@@ -12,7 +12,7 @@ const Hero = () => {
                         initial={{ x: -100, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className="text-2xl dark:text-teal-400 text-slate-500">Hello there!
+                        className="text-2xl dark:text-teal-400 text-slate-500 md:mt-0 mt-4">Hello there!
                     </motion.h1>
                     {/* <h1 className="text-xl mt-2">Hello there!</h1> */}
                     <motion.h1
@@ -31,9 +31,9 @@ const Hero = () => {
                     {/* <p className="mt-2 custom--animation--text">I am a <span className="dark:text-teal-400 text-slate-500"></span></p> */}
                 </div>
                 <motion.div
-                    initial={{ x: 100, opacity: 0 }}
+                    initial={{ x: 50, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
-                    transition={{ duration: 0.5, delay: 1 }}
+                    transition={{ duration: 0.5, delay: .5 }}
                     className="custom-round cursor-pointer responsive-image">
                     <Image src="/profile_photo.jpeg" width={350} height={350} alt="profile picture" className="custom-round cursor-pointer responsive-image" />
                 </motion.div>
