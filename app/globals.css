@@ -51,6 +51,13 @@ body {
   }
 }
 
+#desktop--nav {
+  display: block;
+}
+#mobile--nav {
+  display: none;
+}
+
 .custom-round {
   border-radius: 50%;
   box-shadow: 0 0 0 2px var(--dark--color);
@@ -71,6 +78,12 @@ body {
 }
 
 @media (max-width: 768px) {
+  #desktop--nav {
+    display: none;
+  }
+  #mobile--nav {
+    display: block;
+  }
   .custom--animation--text {
     font-size: 24px;
   }

@@ -15,12 +15,12 @@ const Nav = () => {
         { name: "Contact", href: "#contact" }
     ]
 
-    const navStyle = {
-        display: 'block',
-    }
-    const mobileStyle = {
-        display: 'none',
-    }
+    // const navStyle = {
+    //     display: 'block',
+    // }
+    // const mobileStyle = {
+    //     display: 'none',
+    // }
 
     useEffect(() => {
         const handleResize = () => {
@@ -36,13 +36,13 @@ const Nav = () => {
         }
     }, [])
 
-    if (isMobile) {
-        mobileStyle.display = 'block'
-        navStyle.display = 'none'
-    } else {
-        mobileStyle.display = 'none'
-        navStyle.display = 'block'
-    }
+    // if (isMobile) {
+    //     navStyle.display = 'none'
+    //     mobileStyle.display = 'block'
+    // } else {
+    //     mobileStyle.display = 'none'
+    //     navStyle.display = 'block'
+    // }
 
     const handleNav = () => {
         setIsNavOpen(!isNavOpen)
@@ -74,7 +74,7 @@ const Nav = () => {
                 <div>
                     <span className="text-3xl dark:text-teal-300 text-slate-500 mobile--title">Vincent Scoma</span>
                 </div>
-                <nav id='desktop--nav' style={navStyle}>
+                <nav id='desktop--nav' >
                     <ul className="flex space-x-4">
                         {navItems.map((item, index) => (
                             <li key={index} className="dark:hover:text-teal-400 hover:text-slate-400 hover:underline transition-all duration-200 ease-in-out underline-offset-8 text-2xl">
@@ -84,7 +84,7 @@ const Nav = () => {
                     </ul>
                     <DarkModeButton />
                 </nav>
-                <nav id='mobile--nav' style={mobileStyle} onClick={handleNav}>
+                <nav id='mobile--nav' onClick={handleNav}>
                     <div className="z-50 fixed top-3 right-4 bg-slate-600 text-neutral-100 rounded-full">
                         <Hamburger size={20} classList='hamburger-react'></Hamburger>
                     </div>
