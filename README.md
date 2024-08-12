@@ -2,6 +2,8 @@
 
 Welcome to my personal website! This site showcases my portfolio, blog, and other personal projects. It serves as an online resume and a platform for sharing my thoughts and work with the world.
 
+https://vincentscomapersonalsite.vercel.app/
+
 ## Table of Contents
 
 - [Features](#features)
