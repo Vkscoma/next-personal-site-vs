@@ -1,0 +1,222 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  transition: all 250ms ease-in-out;
+}
+
+.light {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 243, 243, 243;
+  --background-end-rgb: 243, 243, 243;
+  --light--color: #f5f5f5;
+  --dark--color: #0d1117;
+  --teal--color: #00ad99;
+  --bg--color--light: 243, 243, 243;
+  --bg--color--dark: 13, 17, 23;
+  --mobile--nav--bg--color--light: #acb7c0;
+}
+
+.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 13, 17, 23;
+  --background-end-rgb: 13, 17, 23;
+  --light--color: #f5f5f5;
+  --dark--color: #0d1117;
+  --teal--color: #39ead8;
+  --bg--color--light: #f5f5f5;
+  --bg--color--dark: 13, 17, 23;
+  --mobile--nav--bg--color--dark: #282e3d;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.custom-round {
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--dark--color);
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+}
+
+.custom-round:hover {
+  cursor: pointer;
+  box-shadow: 0 0 25px var(--dark--color), 0 0 50px var(--dark--color),
+    0 0 100px var(--dark--color);
+}
+
+.custom--animation--text {
+  font-size: 34px;
+  font-weight: 700;
+  min-width: 300px;
+}
+
+@media (max-width: 768px) {
+  .custom--animation--text {
+    font-size: 24px;
+  }
+
+  .responsive-image {
+    width: 250px;
+    height: auto;
+  }
+
+  .mobile--icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.custom--animation--text span {
+  position: relative;
+}
+
+.custom--animation--text span::before {
+  content: "Support Engineer";
+  animation: words 20s infinite;
+}
+
+.custom--animation--text span::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(var(--background-start-rgb));
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 3px solid var(--dark--color);
+  right: -8px;
+  bottom: -2px;
+  animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+  to {
+    border-left: 2px solid #fff;
+  }
+}
+@keyframes words {
+  0%,
+  20% {
+    content: "Support Engineer";
+  }
+  21%,
+  40% {
+    content: "Hobby Developer";
+  }
+  41%,
+  60% {
+    content: "Musician";
+  }
+  61%,
+  80% {
+    content: "Husband";
+  }
+  81%,
+  100% {
+    content: "Father";
+  }
+}
+@keyframes typing {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 8px);
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile--title {
+    display: none;
+  }
+}
+
+.mobile--nav--overlay {
+  position: fixed;
+  height: 100%;
+  background-color: var(--mobile--nav--bg--color--light);
+  color: var(--dark--color);
+  font-weight: 600;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.mobile--nav--open {
+  transform: translateX(0);
+}
+
+.dark {
+  .custom-round {
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px white;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+  }
+
+  .custom-round:hover {
+    cursor: pointer;
+    box-shadow: 0 0 25px white, 0 0 50px white, 0 0 100px white;
+  }
+
+  .custom--animation--text span::before {
+    content: "Support Engineer";
+    color: var(--teal--color);
+    animation: words 20s infinite;
+  }
+
+  .custom--animation--text span::after {
+    content: "";
+    position: absolute;
+    background-color: rgb(var(--background-start-rgb));
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid rgb(var(--background-start-rgb));
+    right: -8px;
+    bottom: -2px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+  }
+
+  .mobile--nav--overlay {
+    background-color: var(--mobile--nav--bg--color--dark);
+    color: var(--light--color);
+  }
+}
