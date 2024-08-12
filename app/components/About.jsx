@@ -1,6 +1,6 @@
 "use client"
 import Image from 'next/image'
-import React, { useContext } from 'react'
+import React, { createContext } from 'react'
 import { motion } from 'framer-motion'
 import { FaBriefcase, FaBook } from 'react-icons/fa'
 
@@ -34,7 +34,7 @@ const About = () => {
                             transition={{ duration: 0.5, delay: 0.8 }}
                             viewport={{ once: true }}
                         >
-                            <Image src="/VS-main.jpg" width={300} height={300} alt="" className=" rounded-3xl mx-auto responsive-image" />
+                            <Image src="/about_vs.jpg" width={300} height={300} alt="" className=" rounded-3xl mx-auto responsive-image" />
                         </motion.div>
                         <motion.div
                             whileInView={{ opacity: 1 }}
