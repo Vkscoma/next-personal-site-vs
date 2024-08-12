@@ -34,5 +34,5 @@ To run the website locally, you'll need to have [Node.js](https://nodejs.org/) i
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/yourrepository.git
-   cd yourrepository
+   git clone https://github.com/yourusername/next-personal-site-vs.git
+   cd next-personal-site-vs
