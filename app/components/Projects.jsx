@@ -21,11 +21,11 @@ const Projects = () => {
             alt: "Band Website"
         },
         {
-            image: "/cst.png",
-            title: "Comma Seperator Tool",
-            web_page: "https://vkscoma.github.io/comma-sperator-tool/",
-            github_link: "https://github.com/Vkscoma/comma-sperator-tool",
-            alt: "Comma Seperator Tool"
+            image: "/dctapp.png",
+            title: "Dictionary App",
+            web_page: "https://vkscoma.github.io/dictionary-app/",
+            github_link: "https://github.com/Vkscoma/dictionary-app",
+            alt: "Dictionary App"
         }
     ]
     return (
